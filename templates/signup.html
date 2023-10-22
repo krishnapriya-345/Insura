@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/assets/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="static/assets/css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="static/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Great+Vibes&family=Tangerine&display=swap" rel="stylesheet">
+
+    <title>SigniUP</title>
+    <style>
+      a:link, a:visited {
+        background-color: rgb(82, 48, 238);
+        color: rgb(245, 243, 243);
+        border: 2px solid rgb(235, 238, 238);
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+      }
+      
+      a:hover, a:active {
+        background-color: rgb(82, 48, 238);
+        color: white;
+      }
+    h1,p,h2{
+      font-style: italic;
+      font-family: cursive;
+    }
+      </style>
+  </head>
+  <body>
+  
+
+  
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="static/assets/images/undraw_remotely_2j6y.svg" alt="Image" class="img-fluid">
+        </div>
+        <div class="col-md-6 contents">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="mb-4">
+              <h3 style="font-size: 40px; font-family: Tangerine; font-weight: bold;font-style: normal;">Sign Up</h3>
+              
+            </div>
+            <form action="/signup" method="GET">
+              <div class="form-group first">
+                <label for="username">Username</label>
+                <input type="text" name="user" class="form-control" id="username">
+                
+
+              </div>
+              <div class="form-group first">
+                <label for="name1">Name</label>
+                <input type="text" name="name" class="form-control" id="name1">
+
+              </div>
+             
+              <div class="form-group first">
+                <label for="email">Email</label>
+                <input type="text" name="email" class="form-control" id="email">
+
+              </div>
+              <div class="form-group first">
+                <label for="name">Number</label>
+                <input type="text" name="mobile" class="form-control" id="mobile">
+
+              </div>
+              <div class="form-group last mb-4">
+                <label for="password">Password</label>
+                <!-- <input type="password" name="password" class="form-control" id="password"> -->
+                <input type="password" name="password" class="form-control" id="signupPassword">
+              
+                
+              </div>
+              
+              
+              
+              <!-- original -->
+              <!-- <input type="submit" value="Register" class="btn btn-block btn-primary"> -->
+
+
+              <button value="Register" id="signUpButton" class="btn btn-block btn-primary"> Sign Up</button>
+
+
+              <!-- <input type="submit" id="signUpButton" value="Register" class="btn btn-block btn-primary"> -->
+
+              <!-- <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const signUpButton = document.getElementById("signUpButton");
+                    
+                    signUpButton.addEventListener("click", function() {
+                        const newUsername = document.getElementById("newUsername").value;
+                        const newPassword = document.getElementById("newPassword").value;
+                        
+                        // Store the new username and password (you might use a database or local storage)
+                        localStorage.setItem("registeredUsername", newUsername);
+                        localStorage.setItem("registeredPassword", newPassword);
+                        
+                        
+                        
+                        
+                        
+                       
+                    });
+                });
+            </script> -->
+
+
+
+
+
+            <!-- <script>
+              document.getElementById('signupButton').addEventListener('click', () => {
+                  const password = document.getElementById('signupPassword').value;
+                  localStorage.setItem('userPassword', password);
+                  alert('Sign up successful. You can now sign in.');
+              });
+          </script> -->
+
+
+
+
+
+
+          <script>
+            document.getElementById('signupButton').addEventListener('click', () => {
+                const password = document.getElementById('signupPassword').value;
+                // Redirect to the sign-in page with the password as a query parameter
+                window.location.href = `signin.html?password=${password}`;
+            });
+        </script>
+
+
+
+
+
+
+
+
+
+              <br>
+              <div class="form-row-last">
+                <p style="font-size: 40px; color:black; font-family: Tangerine; font-weight: bold;font-style: normal;" class="text-1">Already have an account?
+      
+                </p>
+                <a href="/login">Sign in</a>
+            </form>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+<br><br><br>
+<div>
+  <section class="container-fluid footer_section">
+    <p style="text-align: center; margin-bottom: auto;color:lightslategray">
+      © 2023 All Rights Reserved By Team 10
+      
+    </p>
+  </section>
+  <!-- footer section -->
+</div>
+
+  
+    <script src="static/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="static/assets/js/popper.min.js"></script>
+    <script src="static/assets/js/bootstrap.min.js"></script>
+    <script src="static/assets/js/main.js"></script>
+  </body>
+</html>

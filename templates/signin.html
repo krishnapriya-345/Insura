@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/assets/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="static/assets/css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="static/assets/css/style.css">
+
+    <link rel="stylesheet" href="static/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Great+Vibes&family=Tangerine&display=swap" rel="stylesheet">
+
+
+
+
+    <title>Signin</title>
+    <style>
+      a:link, a:visited {
+        background-color: rgb(82, 48, 238);
+        color: rgb(245, 243, 243);
+        border: 2px solid rgb(235, 238, 238);
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+      }
+      
+      a:hover, a:active {
+        background-color: rgb(82, 48, 238);
+        color: white;
+      }
+    h1,p,h2{
+      font-style: italic;
+      font-family: cursive;
+    }
+  
+
+
+
+
+
+  </style>
+  </head>
+  <body>
+  
+
+  
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <!-- <img src="static/assets/images/undraw_remotely_2j6y.svg" alt="Image" class="img-fluid">
+          <img src="static\images\c44c1690013661.5e0a009911e87.gif" alt="Image" class="img-fluid">
+          <img src="static\images\Cartoon-vector-illustration-of-man-working-with-computer.jpg" alt="Image" class="img-fluid" width="400">
+          <img src="static\images\depositphotos_408065860-stock-illustration-workplace-design-flat-color-vector.jpg" alt="Image" class="img-fluid" width="400"> -->
+          <img src="static\images\istockphoto-1154312399-170667a.jpg" alt="Image" class="img-fluid" width="400">
+          <!-- <img src="static\images\istockphoto-1165699436-612x612.jpg" alt="Image" class="img-fluid" width="400">
+          <img src="static\images\pngtree-businessman-sitting-at-desk-working-on-computer-in-office-png-image_8438922.png" alt="Image" class="img-fluid" width="450">
+         -->
+
+
+
+
+
+        </div>
+        <div class="col-md-6 contents">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="mb-4">
+              <h3 style="font-size: 40px; font-family: Tangerine; font-weight: bold;">Sign In</h3>
+              
+            </div>
+            <form action="/signin" method="GET" id="loginForm">
+              <div class="form-group first">
+                <label for="username">Username</label>
+                <input type="text" name="user" class="form-control" id="username">
+
+              </div>
+              <div class="form-group last mb-4">
+                <label for="password">Password</label>
+                <!-- <input type="password" name="password" class="form-control" id="password"> -->
+                <input type="password" name="password" class="form-control" id="signinPassword">
+                
+              </div>
+              
+              <div class="d-flex mb-5 align-items-center">
+                <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label>
+                <span class="ml-auto"><a href="" onclick="forgotPassword()"  class="forgot-pass">Forgot Password</a></span>
+              </div>
+
+              
+              <!-- <input type="submit" class="btn btn-block btn-primary"> -->
+              <button  class="btn btn-block btn-primary" id="signinButton" > submit</button>
+              
+              
+
+
+
+<script>
+
+      document.addEventListener("DOMContentLoaded", function () {
+      const loginForm = document.getElementById("loginForm");
+      loginForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+      
+          const usernameInput = document.getElementById("username");
+          const passwordInput = document.getElementById("password");
+      
+          const username = usernameInput.value.trim();
+          const password = passwordInput.value.trim();
+      
+          if (username === "" && password === "") {
+              alert("Username and password cannot be empty.");
+          } 
+          else if(username === ""){
+            alert("Please Enter username");
+          }
+          else if(password === ""){
+            alert("Please Enter password");
+          }
+          
+          else{
+            document.getElementById("loginForm").submit();
+          }
+          
+        });
+      });
+                        
+</script>
+
+
+
+
+
+
+<!-- <script>
+  const loginForm = document.getElementById("loginForm");
+  document.getElementById('signinButton').addEventListener('click', () => {
+      const storedPassword = localStorage.getItem('userPassword');
+      const enteredPassword = document.getElementById('signinPassword').value;
+
+      if (enteredPassword != storedPassword) {
+        alert('Passwords do not match. Please try again.');
+                
+            } else {
+                
+              document.getElementById("loginForm").submit();
+            }
+
+      
+      
+      
+  });
+</script> -->
+
+
+
+
+<script>
+  // Function to retrieve query parameters from URL
+  function getParameterByName(name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, "\\$&");
+      const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+
+  document.getElementById('signinButton').addEventListener('click', () => {
+      const enteredPassword = document.getElementById('signinPassword').value;
+      // const username = document.getElementById("username").value;
+      const signUpPassword = getParameterByName('password');
+
+
+      // document.cookie = `username=${username}; password=${signUpPassword}; expires=Thu, 01 Jan 2099 00:00:00 UTC; path=/`;
+
+
+      
+      if (enteredPassword == signUpPassword) {
+        
+        document.getElementById("loginForm").submit();
+          
+      }
+     
+   
+      else {
+          alert('Passwords do not match. Please try again.');
+      }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              
+
+
+              <br>
+              <div class="form-row-last">
+                <p style="font-size: 40px; font-family: Tangerine; font-weight: bold; color: black; font-style: normal;" class="text-1"> Don't have an account yet? <br>Click here for Sign Up
+      
+                </p>
+                <a href="/logon">Sign Up</a>
+              </div>
+
+              <!-- <span class="d-block text-left my-4 text-muted">&mdash; or login with &mdash;</span>
+              
+              <div class="social-login">
+                <a href="#" class="facebook">
+                  <span class="icon-facebook mr-3"></span> 
+                </a>
+                <a href="#" class="twitter">
+                  <span class="icon-twitter mr-3"></span> 
+                </a>
+                <a href="#" class="google">
+                  <span class="icon-google mr-3"></span> 
+                </a>
+              </div> -->
+            </form>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+    <script>
+      function forgotPassword(){
+        alert('Please sign up with a new username');
+      }
+    </script>
+
+    
+    <div>
+      <section class="container-fluid footer_section">
+        <p style="text-align: center; margin-bottom: auto; color:lightslategray">
+          © 2023 All Rights Reserved By Team 10
+          
+        </p>
+      </section>
+      <!-- footer section -->
+    </div>
+
+
+    <script src="static/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="static/assets/js/popper.min.js"></script>
+    <script src="static/assets/js/bootstrap.min.js"></script>
+    <script src="static/assets/js/main.js"></script>
+  </body>
+</html>
